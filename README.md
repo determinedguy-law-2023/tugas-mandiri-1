@@ -1,17 +1,35 @@
-## How to run
-### Locally
-#### Requirements
+# Tugas Mandiri 1
+
+> Proyek ini dibuat untuk memenuhi tugas mandiri 1 pada mata kuliah Layanan dan Aplikasi Web (CSCE604271) yang diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia pada Semester Genap, Tahun Ajaran 2022/2023.
+
+## Templat
+
+<https://github.com/Meta502/law-django-template>
+
+## Cara Menjalankan
+
+### Lokal
+
+#### Persyaratan
+
 - Python 3.10
-- pipenv (install using python -m pip install pipenv)
-#### Installation
-- Run `pipenv install` on the project directory
-- Create a new `.env` file based on `.env.example`
-- Run `pipenv shell`
-- Run `python manage.py runserver`
-### Docker (For deployment on GCP)
-#### Requirements
-- Latest version of Docker
-#### Installation
-- Run `docker-compose up` on the project directory
-- Application will deploy all necessary dependencies automatically
-- If an error occurs during migration, rerun `docker-compose up`
+- pipenv (gunakan `python -m pip install pipenv` untuk menginstal `pipenv`)
+
+#### Instalasi
+
+- Jalankan `pipenv install` di dalam direktori proyek
+- Buatlah file `.env` yang baru, berdasarkan `.env.example`
+- Jalankan `pipenv shell`
+- Jalankan `python manage.py runserver`
+
+### Docker (*Deployment* pada GCP)
+
+#### Persyaratan
+
+- Docker (versi terbaru)
+
+#### Instalasi
+
+- Jalankan `docker-compose up` di dalam direktori proyek
+- Aplikasi akan men-*deploy* semua dependensi yang diperlukan secara otomatis
+- Apabila terjadi kesalahan selama migrasi, jalankan kembali `docker-compose up`
