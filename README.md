@@ -1,4 +1,4 @@
-# Tugas Mandiri 1
+# Carikata
 
 > Proyek ini dibuat untuk memenuhi Tugas Mandiri 1 pada mata kuliah Layanan dan Aplikasi Web (CSCE604271) yang diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia pada Semester Genap, Tahun Ajaran 2022/2023.
 
@@ -8,35 +8,14 @@ Ide: Pencarian kata dengan spesifikasi jumlah huruf (awalan dan akhiran? TBA) be
 
 <https://github.com/Meta502/law-django-template>
 
-## Resources
+## Sumber Data
 
-<https://github.com/damzaky/kumpulan-kata-bahasa-indonesia-KBBI>
+<https://github.com/Hidayathamir/kata-kbbi-github>
 <https://github.com/btrianurdin/new-kbbi-api>
 
-## Cara Menjalankan
+Saya awalnya berpikiran untuk menggunakan [kbbi_dataset](https://github.com/fdciabdul/kbbi_dataset), namun bentuk datanya masih sangat kasar untuk penggunaan program ini.
 
-### Lokal
+## Referensi
 
-#### Persyaratan
-
-- Python 3.10
-- pipenv (gunakan `python -m pip install pipenv` untuk menginstal `pipenv`)
-
-#### Instalasi
-
-- Jalankan `pipenv install` di dalam direktori proyek
-- Buatlah file `.env` yang baru, berdasarkan `.env.example`
-- Jalankan `pipenv shell`
-- Jalankan `python manage.py runserver`
-
-### Docker (*Deployment* pada GCP)
-
-#### Persyaratan
-
-- Docker (versi terbaru)
-
-#### Instalasi
-
-- Jalankan `docker-compose up` di dalam direktori proyek
-- Aplikasi akan men-*deploy* semua dependensi yang diperlukan secara otomatis
-- Apabila terjadi kesalahan selama migrasi, jalankan kembali `docker-compose up`
+- [Url parameters, extra options & query strings](https://www.webforefront.com/django/accessurlparamstemplates.html)
+- [Capturing URL parameters in request.GET](https://stackoverflow.com/a/50714430)
