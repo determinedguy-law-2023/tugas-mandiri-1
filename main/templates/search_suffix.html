@@ -11,10 +11,11 @@
         Cari Kata Berdasarkan Sufiks
     </h1>
     <br>
-    <form>
+    <form method="post">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="sufiks" class="form-label">Sufiks</label>
-          <input type="text" class="form-control" id="sufiks" required>
+          <input type="text" class="form-control" id="sufiks" name="sufiks" required>
         </div>
         <button type="submit" class="btn btn-primary">Cari</button>
     </form>

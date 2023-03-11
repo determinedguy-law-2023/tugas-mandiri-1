@@ -11,19 +11,20 @@
         Cari Kata Berdasarkan Panjang
     </h1>
     <br>
-    <form>
+    <form method="post">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="panjang" class="form-label">Panjang (minimum)</label>
-          <input type="number" class="form-control" min="1" id="panjang" required>
+          <input type="number" class="form-control" min="1" id="panjang" name="panjang" required>
         </div>
         <div class="mb-3">
           <label for="batas" class="form-label">Panjang maksimum (opsional)</label>
-          <input type="number" class="form-control" min="0" id="batas">
+          <input type="number" class="form-control" min="0" id="batas" name="batas">
           <div id="emailHelp" class="form-text">
             Jika kamu ingin mencari kata dengan panjang yang pas, jangan isi bagian ini.
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Cari</button>
+        <input type="submit" class="btn btn-primary" value="Cari">
     </form>
 </div>
 

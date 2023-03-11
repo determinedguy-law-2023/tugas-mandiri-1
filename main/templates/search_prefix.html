@@ -11,10 +11,11 @@
         Cari Kata Berdasarkan Prefiks
     </h1>
     <br>
-    <form>
+    <form method="post">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="prefiks" class="form-label">Prefiks</label>
-          <input type="text" class="form-control" id="prefiks" required>
+          <input type="text" class="form-control" id="prefiks" name="prefiks" required>
         </div>
         <button type="submit" class="btn btn-primary">Cari</button>
     </form>
