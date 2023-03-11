@@ -35,7 +35,6 @@ def homepage(request):
 
 def search_length_page(request):
     if request.method == 'POST':
-        print(request.POST.get('panjang'))
         length = int(request.POST.get('panjang'))
         max_length = None
         if request.POST.get('batas'):
@@ -58,6 +57,17 @@ def search_suffix_page(request):
     
     return render(request, "search_suffix.html")
 
+def search_words_page(request):
+    if request.method == 'POST':
+        length, max_length, prefix, suffix = None, None, None, None
+        length = int(request.POST.get('panjang')) if request.POST.get('panjang') else None
+        max_length = int(request.POST.get('batas')) if request.POST.get('batas') else None
+        prefix = str(request.POST.get('prefiks')) if request.POST.get('prefiks') else None
+        suffix = str(request.POST.get('sufiks')) if request.POST.get('sufiks') else None
+        return search_words_function(request, length, max_length, prefix, suffix)
+    
+    return render(request, "search_all.html")
+
 def show_definition(request, word):
     return render(request, "definition.html")
 
@@ -79,20 +89,14 @@ def search_suffix_function(request, suffix):
     context = {'words' : response}
     return render(request, "result.html", context)
 
-def search_words(request):
+def search_words_function(request, length=None, max_length=None, prefix=None, suffix=None):
     # Example usage: http://localhost:8000/cari/?panjang=5&batas=10&prefiks=an&sufiks=i
-    length = request.GET.get('panjang', None)
-    max_length = request.GET.get('batas', None)
-    prefix = request.GET.get('prefiks', None)
-    suffix = request.GET.get('sufiks', None)
-    print(length)
     response = []
 
     words = Kata.objects.all()
 
     if length:
         response = search_by_length(words, int(length), int(max_length))
-        print(response)
     if prefix:
         if not(response):
             response = search_by_prefix(words, prefix)
@@ -104,7 +108,8 @@ def search_words(request):
         else:
             response = search_by_suffix(response, suffix)
     
-    return HttpResponse(serializers.serialize("json", response), content_type="application/json")
+    context = {'words' : response}
+    return render(request, "result.html", context)
 
 def show_all_json(request):
     data = Kata.objects.all()

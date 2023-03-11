@@ -2,20 +2,20 @@
 
 {% load static %}
 
-{% block title %}Cari Panjang{% endblock %}
+{% block title %}Cari Komprehensif{% endblock %}
 
 {% block content %}
 
 <div class="mx-5">
     <h1 class="text-center">
-        Cari Kata Berdasarkan Panjang
+        Cari Kata Komprehensif
     </h1>
     <br>
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
           <label for="panjang" class="form-label">Panjang</label>
-          <input type="number" class="form-control" min="1" id="panjang" name="panjang" required>
+          <input type="number" class="form-control" min="1" id="panjang" name="panjang">
         </div>
         <div class="mb-3">
           <label for="batas" class="form-label">Panjang maksimum (opsional)</label>
@@ -23,6 +23,14 @@
           <div id="emailHelp" class="form-text">
             Jika kamu ingin mencari kata dengan panjang yang pas, jangan isi bagian ini.
           </div>
+        </div>
+        <div class="mb-3">
+            <label for="prefiks" class="form-label">Prefiks</label>
+            <input type="text" class="form-control" id="prefiks" name="prefiks">
+        </div>
+        <div class="mb-3">
+            <label for="sufiks" class="form-label">Sufiks</label>
+            <input type="text" class="form-control" id="sufiks" name="sufiks">
         </div>
         <input type="submit" class="btn btn-primary" value="Cari">
     </form>

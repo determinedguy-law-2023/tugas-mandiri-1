@@ -8,6 +8,6 @@ urlpatterns = [
     path('cari/panjang/', search_length_page, name='search_length'),
     path('cari/prefiks/', search_prefix_page, name='search_prefix'),
     path('cari/sufiks/', search_suffix_page, name='search_suffix'),
-    path('cari/', search_words, name='search_words'),
+    path('cari/', search_words_page, name='search_words'),
     path('definisi/<str:word>', show_definition, name='show_definition'),
 ]
