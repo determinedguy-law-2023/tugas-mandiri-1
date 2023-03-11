@@ -110,22 +110,3 @@ def search_words_function(request, length=None, max_length=None, prefix=None, su
     
     context = {'words' : response}
     return render(request, "result.html", context)
-
-def show_all_json(request):
-    data = Kata.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-
-def show_json_by_length(request, length):
-    words = Kata.objects.all()
-    response = search_by_length(words, length)
-    return HttpResponse(serializers.serialize("json", response), content_type="application/json")
-
-def show_json_by_start(request, prefix):
-    words = Kata.objects.all()
-    response = search_by_prefix(words, prefix)
-    return HttpResponse(serializers.serialize("json", response), content_type="application/json")
-
-def show_json_by_end(request, suffix):
-    words = Kata.objects.all()
-    response = search_by_suffix(words, suffix)
-    return HttpResponse(serializers.serialize("json", response), content_type="application/json")
