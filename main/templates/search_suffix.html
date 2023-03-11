@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Cari Sufiks{% endblock %}
+
+{% block content %}
+
+<div class="mx-5">
+    <h1 class="text-center">
+        Cari Kata Berdasarkan Sufiks
+    </h1>
+    <br>
+    <form>
+        <div class="mb-3">
+          <label for="sufiks" class="form-label">Sufiks</label>
+          <input type="text" class="form-control" id="sufiks" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cari</button>
+    </form>
+</div>
+
+{% endblock content %}

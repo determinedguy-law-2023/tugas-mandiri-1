@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Cari Panjang{% endblock %}
+
+{% block content %}
+
+<div class="mx-5">
+    <h1 class="text-center">
+        Cari Kata Berdasarkan Panjang
+    </h1>
+    <br>
+    <form>
+        <div class="mb-3">
+          <label for="panjang" class="form-label">Panjang (minimum)</label>
+          <input type="number" class="form-control" min="1" id="panjang" required>
+        </div>
+        <div class="mb-3">
+          <label for="batas" class="form-label">Panjang maksimum (opsional)</label>
+          <input type="number" class="form-control" min="0" id="batas">
+          <div id="emailHelp" class="form-text">
+            Jika kamu ingin mencari kata dengan panjang yang pas, jangan isi bagian ini.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Cari</button>
+    </form>
+</div>
+
+{% endblock content %}

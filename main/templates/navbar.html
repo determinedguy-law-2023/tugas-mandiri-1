@@ -27,9 +27,9 @@
             Cari Kata
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Panjang</a></li>
-            <li><a class="dropdown-item" href="#">Prefiks</a></li>
-            <li><a class="dropdown-item" href="#">Sufiks</a></li>
+            <li><a class="dropdown-item" href="{% url 'main:search_length' %}">Panjang</a></li>
+            <li><a class="dropdown-item" href="{% url 'main:search_prefix' %}">Prefiks</a></li>
+            <li><a class="dropdown-item" href="{% url 'main:search_suffix' %}">Sufiks</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="#">Komprehensif</a></li>
           </ul>

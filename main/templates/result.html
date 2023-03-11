@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Hasil{% endblock %}
+
+{% block content %}
+
+<div class="mx-5">
+    <h1 class="text-center">
+        Hasil Pencarian
+    </h1>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Kata</th>
+            <th scope="col">Definisi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for word in words %}
+          <tr>
+            <td>{{ word.kata }}</td>
+            <td>
+                <a href="{% url 'main:search_definition' word.kata %}">
+                    <button>
+                        Lihat
+                    </button>
+                </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock content %}

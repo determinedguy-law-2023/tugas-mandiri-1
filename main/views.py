@@ -33,6 +33,15 @@ def search_by_suffix(words, suffix):
 def homepage(request):
     return render(request, "homepage.html")
 
+def search_length_page(request):
+    return render(request, "search_length.html")
+
+def search_prefix_page(request):
+    return render(request, "search_prefix.html")
+
+def search_suffix_page(request):
+    return render(request, "search_suffix.html")
+
 def show_all_json(request):
     data = Kata.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
