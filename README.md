@@ -19,3 +19,5 @@ Saya awalnya berpikiran untuk menggunakan [kbbi_dataset](https://github.com/fdci
 
 - [Url parameters, extra options & query strings](https://www.webforefront.com/django/accessurlparamstemplates.html)
 - [Capturing URL parameters in request.GET](https://stackoverflow.com/a/50714430)
+
+[comment]: # (Harus install requests di pip)
