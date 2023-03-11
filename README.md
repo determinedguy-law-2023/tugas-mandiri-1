@@ -15,9 +15,13 @@ Ide: Pencarian kata dengan spesifikasi jumlah huruf (awalan dan akhiran? TBA) be
 
 Saya awalnya berpikiran untuk menggunakan [kbbi_dataset](https://github.com/fdciabdul/kbbi_dataset), namun bentuk datanya masih sangat kasar untuk penggunaan program ini.
 
+## Daftar Layanan beserta Parameter
+
+## Tingkat Kesulitan Pembuatan Layanan
+
+## Keunikan Layanan
+
 ## Referensi
 
 - [Url parameters, extra options & query strings](https://www.webforefront.com/django/accessurlparamstemplates.html)
 - [Capturing URL parameters in request.GET](https://stackoverflow.com/a/50714430)
-
-[comment]: # (Harus install requests di pip)
