@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Cari Definisi{% endblock %}
+
+{% block content %}
+
+<div class="mx-5">
+    <h1 class="text-center">
+        Cari Definisi Kata Berdasarkan KBBI
+    </h1>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="kata" class="form-label">Kata</label>
+          <input type="text" class="form-control" id="kata" name="kata" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cari</button>
+    </form>
+</div>
+<br>
+<p class="text-center"> Definisi kata didapatkan dari <a href="https://github.com/btrianurdin/new-kbbi-api">New KBBI API (Scraper)</a>.</p>
+
+{% endblock content %}

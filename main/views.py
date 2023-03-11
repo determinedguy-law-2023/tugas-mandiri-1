@@ -1,6 +1,9 @@
-from django.http import HttpResponse
+import json
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.core import serializers
+from django.urls import reverse
+import requests
 from main.models import Kata
 
 # Functions
@@ -68,9 +71,6 @@ def search_words_page(request):
     
     return render(request, "search_all.html")
 
-def show_definition(request, word):
-    return render(request, "definition.html")
-
 def search_length_function(request, length, max_length):
     words = Kata.objects.all()
     response = search_by_length(words, length, max_length)
@@ -110,3 +110,26 @@ def search_words_function(request, length=None, max_length=None, prefix=None, su
     
     context = {'words' : response}
     return render(request, "result.html", context)
+
+def search_definition(request):
+    if request.method == 'POST':
+        word = str(request.POST.get('kata')) if request.POST.get('kata') else None
+        return HttpResponseRedirect(reverse('main:show_definition', kwargs={'word': word}))
+    return render(request, "search_definition.html")
+
+def show_definition(request, word):
+    definition = requests.get(f'https://new-kbbi-api.up.railway.app/cari/{word}')
+    # print(definition.__dict__)
+    # print(dir(definition))
+    data = json.loads(definition.content)
+    print(data['status'])
+    if str(data['status']) == "False":
+        data = data['message']
+    else:
+        data = data['data'][0]
+    print(data)
+    context = {
+        'word': word,
+        'data': data,
+    }
+    return render(request, "definition.html", context)

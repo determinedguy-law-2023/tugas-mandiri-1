@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Cari Definisi{% endblock %}
+
+{% block content %}
+
+<div class="mx-5">
+    <h1 class="text-center">
+        Definisi Kata <b>{{ word }}</b> Berdasarkan KBBI
+    </h1>
+    <br>
+    {% if data|length > 1 %}
+        <p>Lema: {{ data.lema }}</p>
+        <hr>
+        {% for detail in data.arti %}
+            <p>Kelas kata: {{ detail.kelas_kata }}</p>
+            <p>Deskripsi: {{ detail.deskripsi }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>Kata tidak ditemukan atau terkena limit.</p>
+    {% endif %} 
+</div>
+<br>
+<p class="text-center"> Definisi kata didapatkan dari <a href="https://github.com/btrianurdin/new-kbbi-api">New KBBI API (Scraper)</a>.</p>
+
+{% endblock content %}
