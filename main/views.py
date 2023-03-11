@@ -122,12 +122,10 @@ def show_definition(request, word):
     # print(definition.__dict__)
     # print(dir(definition))
     data = json.loads(definition.content)
-    print(data['status'])
     if str(data['status']) == "False":
         data = data['message']
     else:
         data = data['data'][0]
-    print(data)
     context = {
         'word': word,
         'data': data,
