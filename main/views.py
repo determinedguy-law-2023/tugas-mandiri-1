@@ -30,6 +30,9 @@ def search_by_suffix(words, suffix):
     return result
 
 # Create your views here.
+def homepage(request):
+    return render(request, "homepage.html")
+
 def show_all_json(request):
     data = Kata.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
