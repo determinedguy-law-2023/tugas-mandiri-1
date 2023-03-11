@@ -90,13 +90,13 @@ def search_suffix_function(request, suffix):
     return render(request, "result.html", context)
 
 def search_words_function(request, length=None, max_length=None, prefix=None, suffix=None):
-    # Example usage: http://localhost:8000/cari/?panjang=5&batas=10&prefiks=an&sufiks=i
+    # Example (old) usage: http://localhost:8000/cari/?panjang=5&batas=10&prefiks=an&sufiks=i
     response = []
 
     words = Kata.objects.all()
 
     if length:
-        response = search_by_length(words, int(length), int(max_length))
+        response = search_by_length(words, length, max_length)
     if prefix:
         if not(response):
             response = search_by_prefix(words, prefix)
