@@ -2,6 +2,10 @@
 
 > Proyek ini dibuat oleh Muhammad Athallah (2006527481) untuk memenuhi Tugas Mandiri 1 pada mata kuliah Layanan dan Aplikasi Web (CSCE604271) yang diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia pada Semester Genap, Tahun Ajaran 2022/2023.
 
+## Demonstrasi Situs Web
+
+Demonstrasi layanan dapat dilihat melalui [video ini](https://univindonesia-my.sharepoint.com/:v:/g/personal/muhammad_athallah01_office_ui_ac_id/EZCiWrmpexhPn1E2b16l8kMBE-RwLyRdkNr7ZGn2P94Yew?e=PuwqLb).
+
 ## Daftar Layanan beserta Parameter
 
 Carikata melayani pencarian kata berdasarkan panjang, prefiks, dan sufiks. Selain itu, Carikata dapat mencari definisi kata berdasarkan Kamus Besar Bahasa Indonesia (KBBI).
