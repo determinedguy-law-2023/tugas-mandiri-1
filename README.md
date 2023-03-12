@@ -1,6 +1,6 @@
 # Carikata
 
-> Proyek ini dibuat oleh Muhammad Athallah (2006527481) untuk memenuhi Tugas Mandiri 1 pada mata kuliah Layanan dan Aplikasi Web (CSCE604271) yang diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia pada Semester Genap, Tahun Ajaran 2022/2023.
+> Proyek ini dibuat oleh **Muhammad Athallah (2006527481)** untuk memenuhi **Tugas Mandiri 1** pada mata kuliah **Layanan dan Aplikasi Web (CSCE604271)** yang diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia pada Semester Genap, Tahun Ajaran 2022/2023.
 
 ## Demonstrasi Situs Web
 
