@@ -33,6 +33,8 @@ Terdapat dua kesulitan utama (selain memikirkan ide layanan, tentunya) saat saya
 
 Sejauh yang saya lihat, belum ada layanan pencarian kata berdasarkan panjang, prefiks, dan sufiks secara komprehensif. Selain itu, layanan ini berguna untuk pembuatan lirik lagu, pantun, ataupun karya seni bahasa lainnya yang memperhatikan spesifikasi tertentu, terutama sufiks.
 
+> Layanan ini tentunya sangat berguna untuk pemain Katla (Wordle Bahasa Indonesia), ups!
+
 ## Templat
 
 <https://github.com/Meta502/law-django-template>
